@@ -14,20 +14,9 @@ export default function TaskList(props) {
     onStopTimer,
     filter
   } = props;
-  // console.log(`Эту информацию мы передали из App.js
-  // в TaskList в качестве todos:`);
-  // console.log(todos);
 
   const elements = todos.map((item) => {
-    // console.log(`Элемент массива todos: `);
-    // console.log(item);
-
     const { id, ...itemProps } = item;
-    // console.log(`id = ${id}`);
-    // console.log(itemProps);
-    // console.log(itemProps.label);
-    // console.log("item.edit========");
-    // console.log(item.edit);
 
     return (
       <Task
