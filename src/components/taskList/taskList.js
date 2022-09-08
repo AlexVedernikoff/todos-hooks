@@ -46,15 +46,11 @@ export default function TaskList(props) {
   });
 
   const elementsDone = elements.filter((element) => {
-    if (element) {
-      return element.props.done;
-    }
+    return element.props.done;
   });
 
   const elementsActive = elements.filter((element) => {
-    if (element) {
-      return !element.props.done;
-    }
+    return !element.props.done;
   });
 
   let arrayFiltetered;

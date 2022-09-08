@@ -10,7 +10,11 @@ export default function TaskFilter({ onToggleFilter, buttonsText, filter }) {
     }
     return (
       <li key={i}>
-        <button className={className} onClick={() => onToggleFilter(text)}>
+        <button
+          type="button"
+          className={className}
+          onClick={() => onToggleFilter(text)}
+        >
           {text}
         </button>
       </li>

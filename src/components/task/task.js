@@ -54,7 +54,8 @@ export default function Task(props) {
     }
   }
 
-  let classNames, checked;
+  let classNames;
+  let checked;
   if (done) {
     classNames = "completed";
     checked = true;
@@ -73,7 +74,7 @@ export default function Task(props) {
             type="checkbox"
             onChange={onToggleDone}
             checked={checked}
-          ></input>
+          />
           <label>
             <span className="title">
               <button id="1" onClick={onToggleDone}>
@@ -81,14 +82,8 @@ export default function Task(props) {
               </button>
             </span>
             <span className="description">
-              <button
-                className="icon icon-play"
-                onClick={onStartTimer}
-              ></button>
-              <button
-                className="icon icon-pause"
-                onClick={onStopTimer}
-              ></button>
+              <button className="icon icon-play" onClick={onStartTimer} />
+              <button className="icon icon-pause" onClick={onStopTimer} />
               <span className={isTimeElapsed}>
                 {`${String(min).padStart(2, "0")}:
                   ${String(sec).padStart(2, "0")}`}
@@ -105,8 +100,8 @@ export default function Task(props) {
                 editClassName: "view"
               }));
             }}
-          ></button>
-          <button className="icon icon-destroy" onClick={onDeleted}></button>
+          />
+          <button className="icon icon-destroy" onClick={onDeleted} />
         </div>
       </li>
       <li className="editing">
@@ -120,7 +115,7 @@ export default function Task(props) {
               value={labelState}
               ref={(input) => input && input.focus()}
               autoFocus
-            ></input>
+            />
           </form>
         </div>
       </li>
