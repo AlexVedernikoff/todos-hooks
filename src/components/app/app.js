@@ -252,7 +252,6 @@ export default function App() {
   };
 
   const updateData = () => {
-    // console.log("Произошли изменения в локальном хранилище!");
     let newData = JSON.parse(localStorage.getItem("todoData"));
     let newTimer = JSON.parse(localStorage.getItem("timer"));
     const { todoData } = todoState;
@@ -276,7 +275,6 @@ export default function App() {
   //Если таймер был остановлен из другой вкладки
   const updateTimer = () => {
     const stopId = JSON.parse(localStorage.getItem("stop"));
-    console.log(`Произошло событе stop и оно равно ${stopId}`);
     clearInterval(stopId);
   };
 
@@ -292,8 +290,6 @@ export default function App() {
     const { todoData } = todoState;
     todoData.forEach((el) => {
       if (el.statusTimer === "play") {
-        console.log("Мы запускаем play из UseEffect!");
-        console.log("play!");
         onStartTimer(el.id);
       }
     });
