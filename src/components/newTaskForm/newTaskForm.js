@@ -12,13 +12,10 @@ export default function NewTaskForm({ onItemAdded }) {
   const { label, min, sec } = taskFormState;
 
   const onLabelChange = (event) => {
-    // console.log("Вы вызвали функцию onLabelChange");
-    // console.log(event.target.value);
     setTaskForm({ label: event.target.value, min, sec });
   };
 
   const onChangeTime = (event) => {
-    // console.log(`Мы внутри функции onChangeTime`);
     const { value, name } = event.target;
 
     if (value.trim() && value <= 59 && value >= 0 && !Number.isNaN(value)) {
