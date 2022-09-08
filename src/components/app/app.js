@@ -135,9 +135,6 @@ export default function App() {
   };
 
   const updateTime = (todoData, stringArray) => {
-    // console.log(`Мы внутри функции updateTime`);
-    // console.log(`Старый массив, который мы модифицируем: `);
-    // console.log(todoData);
     const newArray = todoData.map((element, i) => {
       const newItem = element;
       if (stringArray[i]) {
@@ -145,8 +142,6 @@ export default function App() {
       }
       return newItem;
     });
-    // console.log(`И вот наш новый массив: `);
-    // console.log(newArray);
     localStorage.setItem("todoData", JSON.stringify(newArray));
     return newArray;
   };
