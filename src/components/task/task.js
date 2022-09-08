@@ -25,8 +25,6 @@ export default function Task(props) {
   });
 
   const onLabelChange = (event) => {
-    // console.log("Вы вызвали функцию onLabelChange");
-    // console.log(event.target.value);
     setTaskState((previous) => ({
       ...previous,
       labelState: event.target.value
