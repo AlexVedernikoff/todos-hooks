@@ -166,8 +166,6 @@ export default function App() {
   const onStartTimer = (id) => {
     const { todoData, timer } = todoState;
     const idx = todoData.findIndex((el) => el.id === id);
-    console.log("Вы вызвали функцию onStartTimer() для элемента: ");
-    console.log(todoData[idx]);
     if (!timer[id]) {
       const timerId = setInterval(() => {
         setTodoState((previous) => {
